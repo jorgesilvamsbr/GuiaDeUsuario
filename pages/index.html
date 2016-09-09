@@ -945,8 +945,9 @@
 
     <script>
       var guia = new BootstrapTourAdapter();
-      var dica = new Dica("#area-graficos", "Grafico", "Se você está procurando gráficos achará aqui");
-      guia.adicionarDica(dica);
+      var dicaParaGrafico = new Dica("#area-graficos", "Grafico", "Se você está procurando gráficos achará aqui");
+      var dicaParaMensagem = new Dica("#mensagens", "Grafico", "Se você está procurando gráficos achará aqui");
+      guia.adicionarDicas([dicaParaGrafico, dicaParaMensagem]);
       guia.iniciar();
     </script>
 

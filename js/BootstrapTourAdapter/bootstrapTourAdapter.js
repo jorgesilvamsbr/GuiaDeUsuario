@@ -14,6 +14,12 @@ function BootstrapTourAdapter() {
     _bootstrapTour.addStep(dica.construir());
   };
 
+  self.adicionarDicas = function(dicas){
+    dicas.forEach(function(dica){
+        _bootstrapTour.addStep(dica.construir());
+    });
+  }
+
   self.iniciar = function() {
     console.log(_bootstrapTour);
     _bootstrapTour.init();
