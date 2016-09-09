@@ -3,15 +3,16 @@ function BootstrapTourAdapter() {
   var comPlanoDeFundo = true;
   var _bootstrapTour = {};
 
-  self.criar = function() {
+  var constructor = (function() {
     _bootstrapTour = new Tour({
-      backdrop: comPlanoDeFundo
+      backdrop: comPlanoDeFundo,
+      storage: false
     });
     return self;
-  };
+  })();
 
   self.adicionarDica = function(dica) {
-    _bootstrapTour.addStep(dica);
+    _bootstrapTour.addStep(dica.construir());
   };
 
   self.iniciar = function() {

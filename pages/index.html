@@ -938,15 +938,12 @@
 
     <script src="../js/BootstrapTourAdapter/bootstrapTourAdapter.js"></script>
 
+    <script src="../js/BootstrapTourAdapter/dica.js"></script>
+
     <script>
       var guia = new BootstrapTourAdapter();
-      guia.criar();
-
-      guia.adicionarDica({
-        element: "#area-graficos",
-        title: "Gráficos" ,
-        content: "Se você está procurando gráficos achará aqui"
-      });
+      var dica = new Dica("#area-graficos", "Grafico", "Se você está procurando gráficos achará aqui");
+      guia.adicionarDica(dica);
       guia.iniciar();
     </script>
 
