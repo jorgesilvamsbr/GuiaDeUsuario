@@ -19,18 +19,22 @@ function Dica(elemento, titulo, descricao) {
 
   self.alinharParaDireita = function() {
     self.posicao = "right";
+    return self;
   };
 
   self.alinharParaEsquerda = function() {
     self.posicao = "left";
+    return self;
   };
 
   self.alinharParaCima = function() {
     self.posicao = "top";
+    return self;
   };
 
   self.alinharParaBaixo = function() {
     self.posicao = "bottom";
+    return self;
   };
 
   return self;
