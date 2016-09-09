@@ -619,7 +619,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <ul class="timeline">
-                                <li>
+                                <li id="ultimo-evento">
                                     <div class="timeline-badge"><i class="fa fa-check"></i>
                                     </div>
                                     <div class="timeline-panel">
@@ -939,9 +939,12 @@
 
     <script>
       var guia = new BootstrapTourAdapter();
-      var dicaParaGrafico = new Dica("#area-graficos", "Grafico", "Se você está procurando gráficos achará aqui");
-      var dicaParaMensagem = new Dica("#mensagens", "Grafico", "Se você está procurando gráficos achará aqui");
-      guia.adicionarDicas([dicaParaGrafico, dicaParaMensagem]);
+      var dicaParaMensagem = new Dica("#mensagens", "Comentários", "Aqui você poderá acompanhar seus novos comentários.");
+      var dicaParaGrafico = new Dica("#area-graficos", "Gráfico", "Acompanhe aqui a evolução do seu negócio.");
+      var dicaParaLinhaDoTempo = new Dica("#ultimo-evento", "Linha do Tempo", "Fique por dentro dos últimos acontecimentos.");
+      var dicaParaPainelDeNotificacoes = new Dica("#painel-de-notificacao", "Painel de Notificações", "Acompanhe aqui suas notificações.");
+      dicaParaPainelDeNotificacoes.alinharParaEsquerda();
+      guia.adicionarDicas([dicaParaGrafico, dicaParaMensagem, dicaParaLinhaDoTempo, dicaParaPainelDeNotificacoes]);
       guia.iniciar();
     </script>
 

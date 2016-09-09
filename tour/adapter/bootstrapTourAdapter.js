@@ -21,7 +21,6 @@ function BootstrapTourAdapter() {
   }
 
   self.iniciar = function() {
-    console.log(_bootstrapTour);
     _bootstrapTour.init();
     _bootstrapTour.start();
   };
