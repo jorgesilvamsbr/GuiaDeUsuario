@@ -6,9 +6,8 @@ function BootstrapTourAdapter() {
   var constructor = (function() {
     _bootstrapTour = new Tour({
       backdrop: comPlanoDeFundo,
-      storage: false
+      template: '<div class="popover" role="tooltip"> <div class="arrow"></div> <h3 class="popover-title"></h3> <div class="popover-content"></div> <div class="popover-navigation"> <div class="btn-group"> <button class="btn btn-sm btn-default" data-role="prev">&laquo; Anterior</button> <button class="btn btn-sm btn-default" data-role="next">Próximo &raquo;</button> <button class="btn btn-sm btn-default" data-role="pause-resume" data-pause-text="Pausar" data-resume-text="Continuar">Pausar</button> </div> <button class="btn btn-sm btn-default" data-role="end">Encerrar</button> </div> </div>'
     });
-    return self;
   })();
 
   self.adicionarDica = function(dica) {
@@ -16,7 +15,16 @@ function BootstrapTourAdapter() {
   };
 
   self.iniciar = function() {
+    console.log(_bootstrapTour);
     _bootstrapTour.init();
     _bootstrapTour.start();
-  }
+  };
+
+  self.reiniciar = function() {
+    _bootstrapTour.restart();
+  };
+
+  self.definirTemplate = function(template) {
+    _bootstrapTour._options.template = template;
+  };
 }
