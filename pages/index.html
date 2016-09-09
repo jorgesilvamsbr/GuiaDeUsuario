@@ -938,12 +938,12 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
     <script>
-      var guia = new BootstrapTourAdapter();
       var dicaParaMensagem = new Dica("#mensagens", "Comentários", "Aqui você poderá acompanhar seus novos comentários.");
       var dicaParaGrafico = new Dica("#area-graficos", "Gráfico", "Acompanhe aqui a evolução do seu negócio.");
       var dicaParaLinhaDoTempo = new Dica("#ultimo-evento", "Linha do Tempo", "Fique por dentro dos últimos acontecimentos.");
-      var dicaParaPainelDeNotificacoes = new Dica("#painel-de-notificacao", "Painel de Notificações", "Acompanhe aqui suas notificações.");
-      dicaParaPainelDeNotificacoes.alinharParaEsquerda();
+      var dicaParaPainelDeNotificacoes = new Dica("#painel-de-notificacao", "Painel de Notificações", "Acompanhe aqui suas notificações.").alinharParaEsquerda();
+
+      var guia = new BootstrapTourAdapter();
       guia.adicionarDicas([dicaParaGrafico, dicaParaMensagem, dicaParaLinhaDoTempo, dicaParaPainelDeNotificacoes]);
       guia.iniciar();
     </script>
