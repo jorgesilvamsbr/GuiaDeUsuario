@@ -39,11 +39,32 @@
     <script src="../tour/js/bootstrap-tour.min.js"></script>
     <script src="../tour/adapter/bootstrapTourAdapter.js"></script>
     <script src="../tour/adapter/dica.js"></script>
+
+    <style>
+      .botao-flutuante {
+        position: fixed;
+        bottom: 50px;
+        right: 5%;
+        z-index: 1000;
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+        color: #fff;
+        text-align: center;
+        background-color: #e67e22;
+        border: 2px solid #fff;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        -moz-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    </style>
 </head>
 
 <body>
   <form>
-    <button type="button" onclick="guia.reiniciar()">Iniciar</button>
+    <button class="botao-flutuante" type="button" onclick="guia.reiniciar()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
   </form>
 
     <div id="wrapper">
